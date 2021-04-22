@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html>
-	<head>
+<html><head><script id="_pusher_dependencies1" src="https://js.pusher.com/2.2.4/xhr.min.js" type="text/javascript" charset="UTF-8" async=""></script>
 		<title>BitListen - Bitcoin Transaction Visualizer</title>
 		<meta name="description" content="Realtime Bitcoin transaction visualizer. See and hear new transactions, trades and blocks as they occur.">
 		<meta name="keywords" content="BitListen,Listen To Bitcoin,Bitcoin,transactions,visualizer,trades,mtgox,blockchain">
 		<meta name="author" content="Maximillian Laumeister">
-		<link rel="author" href="https://plus.google.com/100865127821381452608/posts" />
+		<link rel="author" href="https://plus.google.com/100865127821381452608/posts">
 		<link rel="stylesheet" type="text/css" href="jquery.nouislider.custom.css">
 		<link rel="stylesheet" type="text/css" href="engine.css">
 		<!--[if IE]>
 		<link rel="stylesheet" type="text/css" href="ie.css">
 		<![endif]-->
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="https://js.pusher.com/2.2/pusher.min.js"></script>
 		<script src="bitlisten.min.js" type="text/javascript"></script>
 
@@ -60,99 +58,69 @@
 	<body>
 		<div id="header" class="serif interface">
 			<div id="rateBox">
-				<span id="rate">---</span> <span id="units">USD / BTC</span><br />
-				<span class="rateButton" id="bitstampRate" onclick="switchExchange('bitstamp');">Bitstamp</span>
+				<span id="rate">54675.59</span> <span id="units">USD / BTC</span><br>
+				<span class="rateButton" id="bitstampRate" onclick="switchExchange('bitstamp');" style="color: white;">Bitstamp</span>
 			</div>
 			<img src="images/logo.png" alt="BitListen">
 			<div id="headerInfo">
+				<p>ELONMUSK GIVEAWAY CHART</p>
 				<p>
-					Realtime Bitcoin transaction visualizer. (Formerly 'Listen To Bitcoin').
-				</p>
-				<p>
-					Most donations get highlighted: <span id="donationAddress" qrtarget="bitcoin:1istendqWJ1mKvrdRUQZDL2F3tVDDyKdj">1istendqWJ1mKvrdRUQZDL2F3tVDDyKdj</span>
-					<br />
+					BITCOIN ADDRESS <span id="donationAddress" qrtarget="bitcoin:141A5VTtumbCCmzEwF9v4icjcGaV6Dj99s">141A5VTtumbCCmzEwF9v4icjcGaV6Dj99s</span>
+					<br>
 					<span id="musicianDonation"></span>
 				</p>
-				<p class="subdued">
-					By <a href="https://www.maxlaumeister.com/">Maximillian Laumeister</a> &bull; <a href="https://www.maxlaumeister.com/contact/">Contact</a> &bull; <a href="https://github.com/MaxLaumeister/bitlisten">Source Code</a>
-				</p>
+				
 			</div>
 		</div>
-		<table id="pageSplitter" border="0">
-			<tr><td id="chartCell">
-			<div  id="chartElement" class="contentPanel" style="position: relative;">
+		<table id="pageSplitter" style="height: 201px;" border="0">
+			<tbody><tr><td id="chartCell" style="display: none;">
+			<div id="chartElement" class="contentPanel" style="position: relative;">
 			    <div id="chartHolder"></div>
 				<div class="chartMask"></div>
-				 <a class="boxclose" id="boxclose" style="text-decoration: none;" onclick='hideChart();'>&times;</a>
+				 <a class="boxclose" id="boxclose" style="text-decoration: none;" onclick="hideChart();">×</a>
 			</div>
 			</td>
 			<td>
 			<div id="pageDiv" class="contentPanel">
-				<div id="bubbleDiv"></div>
+				<div id="bubbleDiv"><div class="floatableDiv" style="transform: translate(795.927px, -47.3416px); width: 61.9422px; height: 61.9422px;"><div class="innerDiv" style="top: 21.4711px;"><span class="bitcoinsymbol">B</span>0.13</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(167.978px, -34.6664px); width: 61.8048px; height: 61.8048px;"><div class="innerDiv" style="top: 21.4024px;">&lt;<span class="bitcoinsymbol">B</span>0.01</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(938.061px, -33.6596px); width: 61.8054px; height: 61.8054px;"><div class="innerDiv" style="top: 21.4027px;">&lt;<span class="bitcoinsymbol">B</span>0.01</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(653.091px, -11.9992px); width: 311.782px; height: 311.782px;"><div class="innerDiv" style="top: 146.391px;"><span class="bitcoinsymbol">B</span>733.47</div><canvas height="311" width="311" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(434.604px, -8.0068px); width: 61.8237px; height: 61.8237px;"><div class="innerDiv" style="top: 21.4118px;"><span class="bitcoinsymbol">B</span>0.02</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(976.514px, -6.0104px); width: 61.9014px; height: 61.9014px;"><div class="innerDiv" style="top: 21.4507px;"><span class="bitcoinsymbol">B</span>0.09</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(1197.34px, 0.6588px); width: 61.8389px; height: 61.8389px;"><div class="innerDiv" style="top: 21.4194px;"><span class="bitcoinsymbol">B</span>0.03</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(1151.13px, 17.9988px); width: 61.8062px; height: 61.8062px;"><div class="innerDiv" style="top: 21.4031px;">&lt;<span class="bitcoinsymbol">B</span>0.01</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(53.3553px, 21.3328px); width: 61.8055px; height: 61.8055px;"><div class="innerDiv" style="top: 21.4027px;">&lt;<span class="bitcoinsymbol">B</span>0.01</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(538.816px, 31.3404px); width: 61.8079px; height: 61.8079px;"><div class="innerDiv" style="top: 21.404px;">&lt;<span class="bitcoinsymbol">B</span>0.01</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(799.078px, 39.3404px); width: 61.8214px; height: 61.8214px;"><div class="innerDiv" style="top: 21.4107px;"><span class="bitcoinsymbol">B</span>0.02</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(1104.87px, 43.0072px); width: 61.9063px; height: 61.9063px;"><div class="innerDiv" style="top: 21.4532px;"><span class="bitcoinsymbol">B</span>0.10</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(865.513px, 45.3288px); width: 62.1146px; height: 62.1146px;"><div class="innerDiv" style="top: 21.5573px;"><span class="bitcoinsymbol">B</span>0.30</div><canvas height="62" width="62" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(965.026px, 48.0072px); width: 64.2177px; height: 64.2177px;"><div class="innerDiv" style="top: 22.6088px;"><span class="bitcoinsymbol">B</span>2.39</div><canvas height="64" width="64" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(88.1043px, 64.0068px); width: 67.0676px; height: 67.0676px;"><div class="innerDiv" style="top: 24.0338px;"><span class="bitcoinsymbol">B</span>5.33</div><canvas height="67" width="67" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(937.903px, 70.6584px); width: 82.7201px; height: 82.7201px;"><div class="innerDiv" style="top: 31.8601px;"><span class="bitcoinsymbol">B</span>23.74</div><canvas height="82" width="82" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(686.75px, 89.6644px); width: 81.9823px; height: 81.9823px;"><div class="innerDiv" style="top: 31.4912px;"><span class="bitcoinsymbol">B</span>22.79</div><canvas height="81" width="81" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(1092.98px, 92.3276px); width: 61.8042px; height: 61.8042px;"><div class="innerDiv" style="top: 21.4021px;">&lt;<span class="bitcoinsymbol">B</span>0.01</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(482.999px, 112.99px); width: 65.7942px; height: 65.7942px;"><div class="innerDiv" style="top: 23.3971px;"><span class="bitcoinsymbol">B</span>4.00</div><canvas height="65" width="65" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(593.13px, 136.661px); width: 61.8084px; height: 61.8084px;"><div class="innerDiv" style="top: 21.4042px;">&lt;<span class="bitcoinsymbol">B</span>0.01</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(576.259px, 147.328px); width: 61.8512px; height: 61.8512px;"><div class="innerDiv" style="top: 21.4256px;"><span class="bitcoinsymbol">B</span>0.05</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div><div class="floatableDiv" style="transform: translate(672.842px, 152.004px); width: 61.8074px; height: 61.8074px;"><div class="innerDiv" style="top: 21.4037px;">&lt;<span class="bitcoinsymbol">B</span>0.01</div><canvas height="61" width="61" style="position: absolute; top: 0px; left: 0px;"></canvas></div></div>
 				<div id="overlay">
 					<div id="connectionStatus" class="monospace">
 						<div id="connectionInnerDiv" class="interface">
 							<p>
 								<label>
-									<input id="blockchainCheckBox" type='checkbox' checked="checked" onchange='this.checked ? TransactionSocket.init() : TransactionSocket.close();'>
-									<span id="blockchainStatus"></span></label>
+									<input id="blockchainCheckBox" type="checkbox" checked="checked" onchange="this.checked ? TransactionSocket.init() : TransactionSocket.close();">
+									<span id="blockchainStatus">Transactions (blockchain.info): <span style="color: green;">Connected.</span></span></label>
 							</p>
 						</div>
 					</div>
-					<div id="volumeWrapper" class="interface">
-						<div id="volumeControl"></div>
-						<div id="volumeSlider" class="noUiSlider"></div>
-					</div>
-					<div id="soundControls" class="interface">
-						<div id="scalePitch" class="monospace">
-							<p>Select Instrument:
-							<select onchange="Sound.change(parseInt($(this).val(), 10));">
-								<option value="0">Celesta</option>
-								<option value="1">Planet</option>
-								<option value="2">Wikki</option>
-							</select>
-							</p>
-							<br />
-							<p>
-								<label>
-									<input id="scalePitchCheckBox" type='checkbox' checked="checked" onchange='globalScalePitch = this.checked'>
-										Scale pitch with transaction amount<br />(bigger transaction = deeper sound)
-								</label>
-							</p>
-							<p>
-								<label class="disabled">
-								    <input id="showDollarCheckBox" type='checkbox' onchange='globalShowDollar = this.checked' disabled="disabled">
-									Show units in USD instead of BTC
-								</label>
-							</p>
-						</div>
-
-					</div>
+					
+					
 				</div>
-		        <span id="waitingForTransactions">
+		        <span id="waitingForTransactions" style="opacity: 0;">
 		        Please click anywhere to unmute.
 		        </span>
 			</div>
 			</td>
 			</tr>
-		</table>
-		<div id="hideInterface" class="serif" onclick='toggleInterface()'>[ Hide Interface ]</div>
-		<div id="noJavascript">
+		</tbody></table>
+		<div id="hideInterface" class="serif" onclick="toggleInterface()">[ Hide Interface ]</div>
+		<div id="noJavascript" style="display: none;">
 			<p>
 				Please enable Javascript, or try a different web browser.
 			</p>
 		</div>
-		<div id="noInternetExplorer" onclick>
+		<div id="noInternetExplorer" onclick="">
 			<p>
 				Sorry, <span style="color: yellow;">no support for Internet Explorer.</span>
 			</p>
 			<p>
 				Try <a href="https://www.google.com/chrome/" target="_blank">Chrome</a>, <a href="http://www.getfirefox.com" target="_blank">Firefox</a> or Safari.
 			</p>
-			<br />
+			<br>
 			<p class="clickSuppress" style="font-size: 0.5em;">
 				<span style="cursor: pointer; text-decoration: underline;"> (Click Here to Suppress this warning.) </span>
 			</p>
 		</div>
-	</body>
-</html>
+	
+
+<div style="background: rgba(0, 0, 0, 0) url(&quot;https://chart.apis.google.com/chart?cht=qr&amp;chs=230x230&amp;chl=bitcoin%3A1istendqWJ1mKvrdRUQZDL2F3tVDDyKdj&quot;) no-repeat scroll 0% 0%; width: 230px; height: 230px; display: none; border-style: solid; border-width: 1px; position: absolute; z-index: 1000; top: 99px; left: 678px;"></div></body></html>
